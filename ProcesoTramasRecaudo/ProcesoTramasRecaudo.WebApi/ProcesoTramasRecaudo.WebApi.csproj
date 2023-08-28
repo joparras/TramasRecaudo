@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="DependencyInjection\" />
+    <Folder Include="Helpers\" />
+    <Folder Include="UseCases\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ProcesoTramasRecaudo.Aplication\ProcesoTramasRecaudo.Aplication.csproj" />
+    <ProjectReference Include="..\ProcesoTramasRecaudo.Domain\ProcesoTramasRecaudo.Domain.csproj" />
+    <ProjectReference Include="..\ProcesoTramasRecaudo.Infrastructure\ProcesoTramasRecaudo.Infrastructure.csproj" />
+  </ItemGroup>
+
+</Project>

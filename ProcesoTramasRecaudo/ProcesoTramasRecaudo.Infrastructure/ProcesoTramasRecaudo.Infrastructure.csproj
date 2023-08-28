@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Database\" />
+    <Folder Include="Mapper\" />
+    <Folder Include="Modules\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ProcesoTramasRecaudo.Aplication\ProcesoTramasRecaudo.Aplication.csproj" />
+    <ProjectReference Include="..\ProcesoTramasRecaudo.Domain\ProcesoTramasRecaudo.Domain.csproj" />
+  </ItemGroup>
+
+</Project>
