@@ -1,0 +1,52 @@
+CREATE TABLE ARCHIVO (
+Id UNIQUEIDENTIFIER PRIMARY KEY,
+NombreArchivo VARCHAR(100),
+FechaRegistro Datetime , 
+Estado int , 
+TipoArchivo int , 
+IdArchivo UNIQUEIDENTIFIER NULL
+)
+
+CREATE TABLE RECAUDOS (
+   Id UNIQUEIDENTIFIER PRIMARY KEY,
+   IdArchivo UNIQUEIDENTIFIER, 
+   Cia VARCHAR(50),
+    CodProducto VARCHAR(10),
+    Producto VARCHAR(200),
+    NroCertificado VARCHAR(50),
+    NroSolicitud VARCHAR(50),
+    TipoDoc VARCHAR(50),
+    NroDoc VARCHAR(50),
+    Nombre VARCHAR(100),
+    Apellidos VARCHAR(100),
+    TipoDocCont VARCHAR(50),
+    NroDocCont VARCHAR(50),
+    NombreCont VARCHAR(100),
+    ApellidosCont VARCHAR(100),
+    Cuota INT,
+    Condicion VARCHAR(50),
+    FechaEmisionCuota DATE,
+    FechaPago DATE,
+    Periodicidad VARCHAR(50),
+    MonedaId VARCHAR(50),
+    Moneda VARCHAR(10),
+    PrimaBruta DECIMAL(18, 2),
+    PrimaNeta DECIMAL(18, 2),
+    TipoComision VARCHAR(50),
+    PorcComiscomerc DECIMAL(18, 2),
+    PorcComisrecaud DECIMAL(18, 2),
+    IGV DECIMAL(18, 2),
+    AbonoBanco DECIMAL(18, 2),
+    AbonoCompania DECIMAL(18, 2),
+    FOREIGN KEY(IdArchivo) REFERENCES ARCHIVO(Id)
+);
+
+    CREATE TABLE Log (
+    Id UNIQUEIDENTIFIER PRIMARY KEY,
+    ArchivoId UNIQUEIDENTIFIER NULL,
+    TipoDeLog INT,
+    CasoDeUso VARCHAR(100),
+    Mensaje VARCHAR(MAX),
+    FechaDeLog DATETIME,
+    FOREIGN KEY (ArchivoId) REFERENCES Archivo(Id)
+);
