@@ -7,8 +7,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Mapper\" />
-    <Folder Include="Modules\" />
+    <Folder Include="Database\Repositories\" />
+    <Folder Include="NewFolder\" />
   </ItemGroup>
 
 	<ItemGroup>
